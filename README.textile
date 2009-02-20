@@ -1,0 +1,38 @@
+h1. Nginx Upload Progress for Prototype
+
+Example:
+
+<pre><code>
+	<style type="text/css">
+	.bar {
+	    width: 300px;
+	    background: #eee;
+			border: 1px solid #222;
+	}
+	#progressbar {
+	width: 0px;
+	height: 24px;
+	background: #333;
+	}
+	</style>
+
+	<script type="text/javascript">
+	document.observe('dom:loaded', function() {
+		$('upload').uploadProgress();
+	});
+	</script>
+
+	<form action="/some_action" enctype="multipart/form-data" id="upload" method="post">
+		<input id="myFile" name="myFile" type="file" />
+		<input type="submit" value="Upload!" />
+	</form>
+	<div class="bar">
+		<div id="progressbar">&nbsp;</div>
+	</div>
+</code></pre>
+
+You can pass some options to the uploadProgess() call.
+@$('upload').uploadProgress({interval: 5});@
+
+	Port by Edgar J. Suárez - http://mimbles.net
+	Based on the jQuery plugin: http://blog.new-bamboo.co.uk/assets/2007/11/23/jquery.nginxUploadProgress.js
