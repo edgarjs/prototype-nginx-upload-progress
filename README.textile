@@ -1,10 +1,15 @@
-h1. Nginx Upload Progress for Prototype
+h1. Upload Progress for Prototype
+
+For use with the Nginx upload progress module or the Apache upload progress module.
+
+  http://wiki.codemongers.com/NginxHttpUploadProgressModule
+  http://github.com/drogus/apache-upload-progress-module
 
 Example:
 
 <pre><code>
 	<style type="text/css">
-	.bar {
+	#progress {
 	    width: 300px;
 	    background: #eee;
 			border: 1px solid #222;
@@ -26,7 +31,7 @@ Example:
 		<input id="myFile" name="myFile" type="file" />
 		<input type="submit" value="Upload!" />
 	</form>
-	<div class="bar">
+	<div id="progress">
 		<div id="progressbar">&nbsp;</div>
 	</div>
 </code></pre>
@@ -35,4 +40,5 @@ You can pass some options to the uploadProgess() call.
 @$('upload').uploadProgress({interval: 5});@
 
 	Port by Edgar J. Suárez - http://mimbles.net
+  Modified by Nick Plante - http://blog.zerosum.org
 	Based on the jQuery plugin: http://blog.new-bamboo.co.uk/assets/2007/11/23/jquery.nginxUploadProgress.js
