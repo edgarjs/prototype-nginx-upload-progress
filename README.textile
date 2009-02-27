@@ -31,7 +31,7 @@ Example:
 		<input id="myFile" name="myFile" type="file" />
 		<input type="submit" value="Upload!" />
 	</form>
-	<div id="progress">
+	<div id="progress" style="display: none;">
 		<div id="progressbar">&nbsp;</div>
 	</div>
 </code></pre>
